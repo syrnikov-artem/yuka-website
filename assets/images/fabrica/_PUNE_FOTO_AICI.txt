@@ -1,0 +1,7 @@
+Folder: fabrica
+
+Fisiere asteptate:
+  - fabrica.jpg     = fabrica/showroom (apare pe Home, pe pagina Fabrica & showroom si pe Despre). Portret sau peisaj.
+  - productie.jpg   = linie de productie / utilaje (pagina Fabrica & showroom). Peisaj.
+
+Daca lipseste un fisier, site-ul afiseaza automat un placeholder elegant.

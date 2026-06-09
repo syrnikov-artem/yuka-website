@@ -1,0 +1,6 @@
+Folder: hero
+
+Fisiere asteptate:
+  - hero.jpg  — imaginea mare din secțiunea de început (homepage). Orientare portret, ex. 1200×1500px.
+
+Daca lipseste un fisier, site-ul afiseaza automat un placeholder elegant.

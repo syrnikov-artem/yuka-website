@@ -1,0 +1,17 @@
+Folder: Bucătării
+
+Pentru fiecare proiect:
+  - <id>.jpg    = coperta din grila de portofoliu (portret, ex. 1000x1250px)
+  - <id>-1.jpg  = imaginea principala din pagina proiectului (peisaj, ex. 1600x1000px)
+  - <id>-2.jpg  = detaliu
+  - <id>-3.jpg  = mecanism / material
+
+Proiecte in acest folder:
+  [p1] Bucătărie minimalistă caldă cu insulă
+        p1.jpg, p1-1.jpg, p1-2.jpg, p1-3.jpg
+  [p4] Bucătărie de familie cu cămară ascunsă
+        p4.jpg, p4-1.jpg, p4-2.jpg, p4-3.jpg
+  [p7] Bucătărie lucioasă cu insulă mare
+        p7.jpg, p7-1.jpg, p7-2.jpg, p7-3.jpg
+
+Daca lipseste un fisier, site-ul afiseaza automat un placeholder elegant.

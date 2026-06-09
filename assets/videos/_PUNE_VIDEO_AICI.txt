@@ -1,0 +1,9 @@
+Folder: videos (clipuri „La 25 de ani”)
+
+Doua sectiuni au clipuri video:
+  - Despre  -> „Ce spun clientii nostri”
+  - Parteneri -> „Ce spun partenerii nostri”
+
+Acum sunt tile-uri placeholder cu buton de play. Pentru clipuri reale:
+  1) Trimite-mi linkuri YouTube/Vimeo -> le fac embed-uri. (cel mai simplu)
+  2) Sau pune .mp4 aici si spune-mi -> le leg de tile-uri.

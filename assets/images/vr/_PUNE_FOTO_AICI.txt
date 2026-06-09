@@ -1,0 +1,6 @@
+Folder: vr
+
+Fisiere asteptate:
+  - vr.jpg  — imaginea din secțiunea prezentare VR. Orientare peisaj lată, ex. 2000×1100px.
+
+Daca lipseste un fisier, site-ul afiseaza automat un placeholder elegant.

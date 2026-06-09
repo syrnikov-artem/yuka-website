@@ -1,0 +1,6 @@
+Folder: showroom
+
+Fisiere asteptate:
+  - 1.jpg   = showroom (apare pe pagina Fabrica & showroom). Peisaj.
+
+Daca lipseste un fisier, site-ul afiseaza automat un placeholder elegant.
