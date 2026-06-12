@@ -302,6 +302,11 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
 
 /* ---------- responsive ---------- */
+@media(max-width:1180px){
+  .nav-links{gap:0}
+  .nav-links a{padding:9px 10px;font-size:12.5px}
+  .nav-wa{display:none}
+}
 @media(max-width:1024px){
   .c5,.c7,.c8,.c9{grid-column:span 12}
   .c4{grid-column:span 6}
@@ -368,6 +373,15 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 .cat .cn svg{width:16px;height:16px;color:var(--muted);transition:.3s var(--ease);flex:0 0 auto}
 .cat:hover .cn svg{color:var(--green);transform:translateX(3px)}
 .cat p{color:var(--muted);font-size:13px;line-height:1.6}
+
+/* YUKA + lumea — globe */
+.globe-tile{min-height:clamp(420px,54vh,580px);position:relative}
+.globe-tile canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.globe-legend{position:absolute;left:18px;bottom:16px;z-index:3;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.globe-legend .dotg,.globe-legend .dotw{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:1px}
+.globe-legend .dotg{background:var(--green)}
+.globe-legend .dotw{background:rgba(245,245,240,.55)}
+@media(max-width:760px){.globe-tile{min-height:360px}}
 </style>
 </head>
 <body>
@@ -382,6 +396,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
       <a href="#/cum-lucram" data-link data-route="cum-lucram">Cum lucrăm</a>
       <a href="#/fabrica" data-link data-route="fabrica">Fabrică &amp; showroom</a>
       <a href="#/parteneri" data-link data-route="parteneri">Parteneri</a>
+      <a href="#/lumea" data-link data-route="lumea">YUKA + lumea</a>
       <a href="#/despre" data-link data-route="despre">Despre</a>
     </nav>
     <div class="nav-right">
@@ -398,6 +413,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
   <a href="#/cum-lucram" data-link>Cum lucrăm</a>
   <a href="#/fabrica" data-link>Fabrică &amp; showroom</a>
   <a href="#/parteneri" data-link>Parteneri</a>
+  <a href="#/lumea" data-link>YUKA + lumea</a>
   <a href="#/despre" data-link>Despre</a>
   <button class="btn btn-fill" onclick="closeMenu();openModal()">Programează o vizită</button>
 </nav>
@@ -770,6 +786,82 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
   </div></section>
 </div>
 
+<!-- ============ YUKA + LUMEA ============ -->
+<div class="route" id="route-lumea">
+  <section class="tight" style="padding-bottom:0;padding-top:clamp(20px,3vh,36px)">
+    <div class="shell bento">
+      <div class="tile lg c6 hero-main" data-reveal>
+        <span class="chiplet">YUKA + lumea · Livrăm în UE</span>
+        <h1 style="font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.8vw,52px);line-height:1.07;letter-spacing:-.01em;margin-top:20px">Mobilă din Constanța, în case din toată Europa.</h1>
+        <p class="sub">Clienți din Italia, Grecia și din alte țări UE ne aleg în locul producătorilor locali — pentru calitatea de fabrică, procesul gestionat de un singur om și colaborarea simplă la distanță. Distanța nu schimbă nimic: același proiect, aceeași execuție, aceeași garanție.</p>
+        <div class="cta">
+          <button class="btn btn-fill" onclick="openModal()">Programează o discuție online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <a class="btn btn-ghost" href="https://wa.me/40790000288" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
+        </div>
+        <div class="trust"><span>Italia</span><span class="dot"></span><span>Grecia</span><span class="dot"></span><span>și alte țări din UE</span></div>
+      </div>
+      <div class="tile lg flat deep c6 globe-tile" data-reveal>
+        <canvas id="globe" aria-label="Glob cu fabrica YUKA în Constanța și livrări în Europa" role="img"></canvas>
+        <div class="globe-legend"><span><span class="dotg"></span>Constanța — fabrica YUKA</span><span><span class="dotw"></span>Livrări &amp; montaje în UE</span></div>
+      </div>
+      <div class="tile c3 stat d1" data-reveal><b>UE</b><span>Livrare și montaj</span></div>
+      <div class="tile c3 stat d2" data-reveal><b>1 om</b><span>Managerul tău, oriunde ești</span></div>
+      <div class="tile c3 stat d3" data-reveal><b>3D + VR</b><span>Aprobi de la distanță, din cont</span></div>
+      <div class="tile c3 stat d4" data-reveal><b>2 ani</b><span>Garanție — aceeași, oriunde</span></div>
+    </div>
+  </section>
+
+  <section class="tight" id="lm-dece"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">De ce ne aleg</span>
+      <h2 class="sec-title">Comparat cu producătorii locali, câștigăm la detalii.</h2>
+      <p class="intro-p" style="margin-top:16px">Nu concurăm pe distanță. Concurăm pe ce contează: execuție de fabrică, un proces fără fricțiune și un om care răspunde de tot — chiar dacă ești la 2.000 de kilometri.</p>
+    </div></div>
+    <div class="bento">
+      <div class="diff c6" data-reveal><h3>Calitate de fabrică, nu de atelier</h3><p>CNC în 5 axe, cantuire perimetrală cu adeziv PU, feronerie Blum și asamblare de probă în fabrică — totul verificat de noi înainte să plece spre tine.</p></div>
+      <div class="diff c6 d1" data-reveal><h3>Totul de la distanță, prin MarGo</h3><p>Prezentare online, tur virtual 3D la scară reală, punct pe imagine pentru fiecare detaliu și aprobare direct din cont — fără drumuri repetate în România.</p></div>
+      <div class="diff c6" data-reveal><h3>Venim noi la tine</h3><p>Scanarea laser a încăperii o facem la fața locului, iar la final montează echipa noastră — aceeași care cunoaște proiectul. Transport asigurat, mobilier protejat.</p></div>
+      <div class="diff c6 d1" data-reveal><h3>Un singur om, indiferent de fus orar</h3><p>Managerul tău de proiect vorbește direct cu tine, de la prima discuție la montaj. Fără call-center, fără intermediari locali, fără informație pierdută pe drum.</p></div>
+    </div>
+  </div></section>
+
+  <section class="tight" id="lm-proces"><div class="shell">
+    <div class="sec-head">
+      <div class="lead" data-reveal>
+        <span class="chiplet">Cum funcționează la distanță</span>
+        <h2 class="sec-title">Patru pași, două vizite.</h2>
+      </div>
+      <a class="btn btn-ghost d1" href="#/cum-lucram" data-link data-reveal>Vezi metoda completă</a>
+    </div>
+    <div class="bento">
+      <div class="tile step lift c3" data-reveal><div class="num">01</div><h3>Discuție online</h3><p>Video-call cu planurile locuinței și ideile tale. Stabilim direcția și bugetul orientativ.</p></div>
+      <div class="tile step lift c3 d1" data-reveal><div class="num">02</div><h3>Scanare la fața locului</h3><p>Echipa noastră vine la tine: scanare laser 360°, dimensiuni la milimetru, ofertă finală.</p></div>
+      <div class="tile step lift c3 d2" data-reveal><div class="num">03</div><h3>Proiect + aprobare din cont</h3><p>Tur virtual 3D, comentarii punct-pe-imagine prin MarGo și aprobare de oriunde ai fi.</p></div>
+      <div class="tile step lift c3 d3" data-reveal><div class="num">04</div><h3>Transport &amp; montaj</h3><p>Mobilier asamblat de probă în fabrică, transport asigurat, montaj de echipa YUKA. Garanție 2 ani.</p></div>
+    </div>
+  </div></section>
+
+  <section class="tight" id="lm-povesti"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal><span class="chiplet">Povești de departe</span><h2 class="sec-title">Ce spun clienții din afara României.</h2></div></div>
+    <div class="bento">
+      <div class="tile quote c6" data-reveal><div class="mark">&ldquo;</div><blockquote>Am comparat cu trei producători din Lombardia. YUKA a câștigat la detalii: feronerie, cantuire, finisaje — și la felul în care au comunicat pe tot parcursul.</blockquote><div class="who">Familie din Milano · Italia</div></div>
+      <div class="tile quote c6 d1" data-reveal><div class="mark">&ldquo;</div><blockquote>Casa de vacanță e în Grecia, noi suntem jumătate de an la Atena. Totul s-a discutat și s-a aprobat din cont, iar montajul a durat două zile.</blockquote><div class="who">Proprietari · Atena, Grecia</div></div>
+    </div>
+  </div></section>
+
+  <section class="tight" style="padding-bottom:0"><div class="shell bento">
+    <div class="tile lg deep c12 final-tile" data-reveal>
+      <h2>Ești în afara României? Perfect.</h2>
+      <p>Prima discuție e online, gratuită și pe bază de programare — în română sau engleză.</p>
+      <div class="row">
+        <button class="btn btn-fill" onclick="openModal()">Programează o discuție online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <a class="btn btn-ghost" href="https://wa.me/40790000288" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
+      </div>
+      <p class="reassure-line">Te contactăm în maximum o zi lucrătoare. Răspunde de obicei chiar managerul de proiect.</p>
+    </div>
+  </div></section>
+</div>
+
 <!-- ============ DESPRE ============ -->
 <div class="route" id="route-despre">
   <section class="page-hero"><div class="shell" data-reveal>
@@ -858,7 +950,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
         <p>Mobilier premium la comandă, proiectat, produs și montat în Constanța din 2000.</p>
       </div>
       <div class="foot-col"><h5>Explorează</h5>
-        <a href="#/portofoliu" data-link>Portofoliu</a><a href="#/cum-lucram" data-link>Cum lucrăm</a><a href="#/fabrica" data-link>Fabrică &amp; showroom</a><a href="#/parteneri" data-link>Parteneri</a><a href="#/despre" data-link>Despre noi</a>
+        <a href="#/portofoliu" data-link>Portofoliu</a><a href="#/cum-lucram" data-link>Cum lucrăm</a><a href="#/fabrica" data-link>Fabrică &amp; showroom</a><a href="#/parteneri" data-link>Parteneri</a><a href="#/lumea" data-link>YUKA + lumea</a><a href="#/despre" data-link>Despre noi</a>
       </div>
       <div class="foot-col"><h5>Contact</h5>
         <span>Șos. Industrială nr. 6</span><span>Constanța, România</span><a href="tel:+40790000288">+40 790 000 288</a><a href="https://wa.me/40790000288" target="_blank" rel="noopener">WhatsApp</a>
@@ -1068,18 +1160,94 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.t
 function observeReveals(){document.querySelectorAll('.route.active [data-reveal]:not(.in)').forEach(el=>io.observe(el));}
 
 /* ---------- ROUTER ---------- */
-const routes=['home','portofoliu','cum-lucram','fabrica','parteneri','despre','proiect'];
+const routes=['home','portofoliu','cum-lucram','fabrica','parteneri','lumea','despre','proiect'];
 function currentRoute(){let h=location.hash.replace(/^#\//,'').trim();if(!h)return 'home';return routes.includes(h)?h:'home';}
 function showRoute(name){
   document.querySelectorAll('.route').forEach(r=>r.classList.remove('active'));
   (document.getElementById('route-'+name)||document.getElementById('route-home')).classList.add('active');
   document.querySelectorAll('.nav-links a[data-route]').forEach(a=>a.classList.toggle('active',a.dataset.route===name));
-  window.scrollTo(0,0); closeMenu(); setTimeout(observeReveals,20); onScroll();
+  window.scrollTo(0,0); closeMenu(); setTimeout(observeReveals,20); if(name==='lumea'){setTimeout(initGlobe,30);} onScroll();
 }
 let selected=null;
 function router(){const r=currentRoute();if(r==='proiect'){if(!selected)selected=projects[0];renderProject(selected);}showRoute(r);}
 function navigate(hash){if(location.hash===hash){router();}else location.hash=hash;}
 window.addEventListener('hashchange',router);
+/* ---------- GLOBE (YUKA + lumea) — sferă cartografică, fără librării ---------- */
+let _globeStarted=false;
+function initGlobe(){
+  const cv=document.getElementById('globe'); if(!cv||_globeStarted) {resizeGlobe&&resizeGlobe();return;}
+  _globeStarted=true;
+  const ctx=cv.getContext('2d');
+  const D2R=Math.PI/180, TILT=38*D2R;
+  const HOME=[44.17,28.63];
+  const DEST=[[45.46,9.19],[41.9,12.5],[37.98,23.73],[40.64,22.94],[48.14,11.58],[48.21,16.37],[48.86,2.35],[50.85,4.35],[40.42,-3.7],[51.51,-0.13],[34.68,33.04],[52.37,4.9]];
+  let W=0,H=0,DPR=1;
+  window.resizeGlobe=function(){
+    const r=cv.parentElement.getBoundingClientRect();
+    DPR=Math.min(2,window.devicePixelRatio||1);
+    W=cv.width=Math.max(2,r.width*DPR); H=cv.height=Math.max(2,r.height*DPR);
+  };
+  resizeGlobe(); window.addEventListener('resize',resizeGlobe);
+  const v0=(lat,lon)=>{const f=lat*D2R,l=lon*D2R;return [Math.cos(f)*Math.sin(l),Math.sin(f),Math.cos(f)*Math.cos(l)];};
+  function slerp(a,b,t){
+    let d=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; d=Math.max(-1,Math.min(1,d));
+    const th=Math.acos(d); if(th<1e-4) return a;
+    const s=Math.sin(th), A=Math.sin((1-t)*th)/s, B=Math.sin(t*th)/s;
+    return [a[0]*A+b[0]*B, a[1]*A+b[1]*B, a[2]*A+b[2]*B];
+  }
+  let rot=-20*D2R; // Europa în față la start
+  function tf(v){ // rotire în jurul axei polare + înclinare
+    const x=v[0]*Math.cos(rot)+v[2]*Math.sin(rot);
+    const z=-v[0]*Math.sin(rot)+v[2]*Math.cos(rot);
+    const y2=v[1]*Math.cos(TILT)-z*Math.sin(TILT);
+    const z2=v[1]*Math.sin(TILT)+z*Math.cos(TILT);
+    return [x,y2,z2];
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    const cx=W/2, cy=H/2, R=Math.min(W,H)*0.395;
+    const px=p=>[cx+R*p[0], cy-R*p[1]];
+    ctx.lineWidth=1*DPR;
+    // conturul sferei
+    ctx.beginPath(); ctx.arc(cx,cy,R,0,7); ctx.strokeStyle='rgba(245,245,240,.22)'; ctx.stroke();
+    // graticulă
+    ctx.strokeStyle='rgba(245,245,240,.10)';
+    for(let lo=0;lo<360;lo+=20){ctx.beginPath();let pen=false;
+      for(let la=-88;la<=88;la+=4){const p=tf(v0(la,lo));
+        if(p[2]>0){const s=px(p); if(!pen){ctx.moveTo(s[0],s[1]);pen=true;} else ctx.lineTo(s[0],s[1]);} else pen=false;}
+      ctx.stroke();}
+    for(let la=-60;la<=60;la+=20){ctx.beginPath();let pen=false;
+      for(let lo=0;lo<=360;lo+=4){const p=tf(v0(la,lo));
+        if(p[2]>0){const s=px(p); if(!pen){ctx.moveTo(s[0],s[1]);pen=true;} else ctx.lineTo(s[0],s[1]);} else pen=false;}
+      ctx.stroke();}
+    // arce Constanța -> destinații (subtile, alb-cald)
+    const hv=v0(HOME[0],HOME[1]);
+    ctx.strokeStyle='rgba(245,245,240,.15)';
+    for(const d of DEST){const dv=v0(d[0],d[1]);ctx.beginPath();let pen=false;
+      for(let i=0;i<=30;i++){const p=tf(slerp(hv,dv,i/30));
+        if(p[2]>0){const s=px(p); if(!pen){ctx.moveTo(s[0],s[1]);pen=true;} else ctx.lineTo(s[0],s[1]);} else pen=false;}
+      ctx.stroke();}
+    // destinații — puncte alb-cald
+    ctx.fillStyle='rgba(245,245,240,.78)';
+    for(const d of DEST){const p=tf(v0(d[0],d[1]));
+      if(p[2]>0){const s=px(p);ctx.beginPath();ctx.arc(s[0],s[1],2.1*DPR,0,7);ctx.fill();}}
+    // Constanța — verde, puls calm
+    const hp=tf(hv);
+    if(hp[2]>0){const s=px(hp);const pulse=2.6+Math.sin(t/900)*0.5;
+      ctx.fillStyle='#00A402';ctx.beginPath();ctx.arc(s[0],s[1],pulse*DPR,0,7);ctx.fill();
+      ctx.strokeStyle='rgba(0,164,2,.45)';ctx.beginPath();ctx.arc(s[0],s[1],(pulse+4.5)*DPR,0,7);ctx.stroke();}
+  }
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced){draw(0);return;}
+  let running=false,raf=null,prev=null;
+  function loop(ts){if(!running)return;if(prev!=null){rot+=(ts-prev)*0.000040;}prev=ts;draw(ts);raf=requestAnimationFrame(loop);}
+  function start(){if(running)return;running=true;prev=null;raf=requestAnimationFrame(loop);}
+  function stop(){running=false;if(raf)cancelAnimationFrame(raf);}
+  new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?start():stop());},{threshold:.05}).observe(cv);
+  document.addEventListener('visibilitychange',()=>{document.hidden?stop():(cv.getBoundingClientRect().top<innerHeight&&start());});
+  draw(0);
+}
+
 function scrollSec(id){const el=document.getElementById(id);if(!el)return;window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-86,behavior:'smooth'});}
 
 /* ---------- PROJECT ---------- */
