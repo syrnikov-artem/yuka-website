@@ -11,15 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#1A1A1A;--surface:#232321;--surface-2:#2A2A27;--deep:#0F0F0E;
-  --graphite:#5A5A5A;--muted:#8E8E86;--muted-2:#B0B0A8;
+  --bg:#141413;--surface:#1E1E1C;--surface-2:#262624;--deep:#0B0B0A;
+  --graphite:#5A5A5A;--muted:#99988F;--muted-2:#C6C5BC;
   --warm:#F5F5F0;--green:#00A402;--green-soft:rgba(0,164,2,.13);
-  --line:rgba(245,245,240,.1);--line-strong:rgba(245,245,240,.22);
+  --line:rgba(245,245,240,.14);--line-strong:rgba(245,245,240,.28);
   --serif:'Playfair Display',Georgia,'Times New Roman',serif;
   --sans:'Montserrat','Helvetica Neue',Arial,sans-serif;
   --maxw:1320px;--pad:clamp(16px,4vw,56px);
-  --r:22px;--r-lg:28px;--r-sm:14px;
-  --gap:clamp(12px,1.5vw,18px);
+  --r:16px;--r-lg:20px;--r-sm:10px;
+  --gap:clamp(14px,1.9vw,24px);
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -35,9 +35,9 @@ button{font-family:inherit;color:inherit}
 #progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--green);z-index:10000;transition:width .1s linear}
 
 /* ---------- chips / pills ---------- */
-.chiplet{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:rgba(245,245,240,.03)}
+.chiplet{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:rgba(245,245,240,.03)}
 .chiplet::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
-.btn{font-weight:500;font-size:13.5px;letter-spacing:.04em;cursor:pointer;border:0;background:none;transition:all .35s var(--ease);border-radius:999px;white-space:nowrap}
+.btn{font-weight:500;font-size:13.5px;letter-spacing:.04em;cursor:pointer;border:0;background:none;transition:all .35s var(--ease);border-radius:12px;white-space:nowrap}
 .btn svg{flex:0 0 auto;width:14px;height:14px}
 .btn-primary{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border:1px solid var(--green);color:var(--green)}
 .btn-primary:hover{background:var(--green);color:#0F0F0E}
@@ -50,13 +50,13 @@ button{font-family:inherit;color:inherit}
 
 /* ---------- nav pill ---------- */
 .navbar{position:fixed;top:12px;left:0;right:0;z-index:1000}
-.nav-pill{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(24,24,23,.72);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:999px;padding:10px 12px 10px 20px}
+.nav-pill{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(24,24,23,.72);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:16px;padding:10px 12px 10px 20px}
 .navwrap{padding-inline:var(--pad)}
 .brand{display:flex;align-items:center;gap:11px}
 .brand img{display:block;width:auto}
 .logo-mark{height:24px}.logo-word{height:14px;margin-top:2px}
 .nav-links{display:flex;align-items:center;gap:4px}
-.nav-links a{font-size:13px;letter-spacing:.03em;color:var(--muted-2);padding:9px 14px;border-radius:999px;transition:.3s}
+.nav-links a{font-size:13px;letter-spacing:.03em;color:var(--muted-2);padding:9px 14px;border-radius:10px;transition:.3s}
 .nav-links a:hover{color:var(--warm);background:rgba(245,245,240,.05)}
 .nav-links a.active{color:var(--warm);background:rgba(245,245,240,.07)}
 .nav-right{display:flex;align-items:center;gap:10px}
@@ -73,10 +73,10 @@ body.menu-open .nav-toggle span:nth-child(3){top:19px;transform:rotate(-45deg)}
 
 /* ---------- bento ---------- */
 main{padding-top:clamp(96px,12vh,128px)}
-section{padding-block:clamp(52px,7vw,104px)}
+section{padding-block:clamp(64px,8.5vw,128px)}
 section.tight{padding-top:0}
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
-.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,2.6vw,36px);position:relative;overflow:hidden}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,3vw,44px);position:relative;overflow:hidden}
 .tile.flat{padding:0}
 .tile.deep{background:var(--deep)}
 .tile.lg{border-radius:var(--r-lg)}
@@ -86,7 +86,7 @@ section.tight{padding-top:0}
 .r2{grid-row:span 2}
 
 /* section headers (outside tiles) */
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:clamp(24px,3vw,40px);flex-wrap:wrap}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:clamp(32px,4vw,60px);flex-wrap:wrap}
 .sec-head .lead{max-width:56ch}
 .sec-title{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,50px);line-height:1.06;letter-spacing:-.01em;margin-top:16px}
 .sec-sub{color:var(--muted-2);margin-top:14px;max-width:54ch}
@@ -99,7 +99,7 @@ section.tight{padding-top:0}
 /* ---------- photo placeholders / photos ---------- */
 .ph{position:relative;overflow:hidden;background:radial-gradient(130% 90% at 28% 18%,rgba(245,245,240,.09),transparent 55%),linear-gradient(145deg,#2b2b27 0%,#1c1c1a 55%,#121211 100%)}
 .ph::after{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)' opacity='.35'/%3E%3C/svg%3E")}
-.ph .ph-cap{position:absolute;left:16px;bottom:13px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,245,240,.4);font-style:italic;z-index:2}
+.ph .ph-cap{position:absolute;left:16px;bottom:13px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,245,240,.4);z-index:2}
 .ph.v2{background:radial-gradient(120% 90% at 75% 25%,rgba(245,245,240,.08),transparent 55%),linear-gradient(120deg,#262521,#1a1a18 60%,#0f0f0e)}
 .ph.v3{background:radial-gradient(120% 100% at 40% 80%,rgba(245,245,240,.07),transparent 55%),linear-gradient(160deg,#2a2a26,#191917 55%,#111)}
 .ph.v4{background:radial-gradient(120% 90% at 60% 20%,rgba(0,164,2,.06),transparent 50%),linear-gradient(135deg,#232320,#171716 60%,#0e0e0d)}
@@ -107,15 +107,15 @@ section.tight{padding-top:0}
 .ph img.loaded{opacity:1}
 .ph.has-img .ph-cap{display:none}
 .tile.flat>.ph{width:100%;height:100%;min-height:240px}
-.badge-chip{position:absolute;left:16px;bottom:16px;z-index:3;background:rgba(15,15,14,.78);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:10px 18px;display:flex;align-items:baseline;gap:9px}
+.badge-chip{position:absolute;left:16px;bottom:16px;z-index:3;background:rgba(15,15,14,.78);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:12px;padding:10px 18px;display:flex;align-items:baseline;gap:9px}
 .tile:has(.badge-chip) .ph-cap{display:none}
-.badge-chip b{font-family:var(--serif);font-size:19px;font-weight:600}
+.badge-chip b{font-family:var(--sans);font-size:14.5px;font-weight:600}
 .badge-chip span{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* ---------- hero bento ---------- */
 .hero-main .chiplet{margin-bottom:22px}
 .hero-main h1{font-family:var(--serif);font-weight:600;font-size:clamp(31px,4.2vw,58px);line-height:1.07;letter-spacing:-.01em}
-.hero-main h1 em{font-style:italic}
+.hero-main h1 em{font-style:normal}
 .hero-main .sub{margin-top:20px;max-width:32em;color:var(--muted-2);font-size:clamp(15px,1.15vw,17.5px)}
 .hero-main .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
 .hero-main .trust{margin-top:auto;padding-top:28px;font-size:12px;letter-spacing:.05em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
@@ -128,7 +128,7 @@ section.tight{padding-top:0}
 /* ---------- position tile ---------- */
 .pos-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,64px);align-items:start}
 .pos-grid .big{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,44px);line-height:1.16;letter-spacing:-.01em;max-width:18ch}
-.pos-grid .big em{font-style:italic;color:var(--green)}
+.pos-grid .big em{font-style:normal;color:var(--green)}
 .pos-grid p{color:var(--muted-2);line-height:1.75}
 .pos-grid p+p{margin-top:16px}
 
@@ -137,9 +137,9 @@ section.tight{padding-top:0}
 .work.hide{display:none}
 .work .ph{aspect-ratio:4/3}
 .tile.work>.ph{height:auto;min-height:0}
-.work .meta{padding:18px 20px 20px;display:flex;flex-direction:column;gap:5px}
+.work .meta{padding:20px 22px 24px;display:flex;flex-direction:column;gap:5px}
 .work .meta .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
-.work .meta h3{font-family:var(--serif);font-weight:500;font-size:18px;line-height:1.3;transition:color .3s}
+.work .meta h3{font-family:var(--sans);font-weight:600;font-size:15px;line-height:1.4;letter-spacing:.01em;transition:color .3s}
 .work .meta .loc{font-size:12.5px;color:var(--muted)}
 .work:hover .meta h3{color:#fff}
 .work .arrow{position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;background:rgba(15,15,14,.5);backdrop-filter:blur(6px);opacity:0;transform:translateY(-4px);transition:.4s var(--ease);z-index:3}
@@ -147,16 +147,16 @@ section.tight{padding-top:0}
 .work .arrow svg{width:14px;height:14px}
 .see-all{display:flex;justify-content:center;margin-top:clamp(24px,3vw,36px)}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(20px,2.6vw,32px)}
-.chip{font-size:12.5px;letter-spacing:.04em;color:var(--muted-2);border:1px solid var(--line);background:transparent;padding:9px 17px;border-radius:999px;cursor:pointer;transition:all .3s}
+.chip{font-size:12.5px;letter-spacing:.04em;color:var(--muted-2);border:1px solid var(--line);background:transparent;padding:9px 17px;border-radius:10px;cursor:pointer;transition:all .3s}
 .chip:hover{border-color:var(--line-strong);color:var(--warm)}
 .chip.active{background:var(--warm);color:#141414;border-color:var(--warm)}
 
 /* ---------- step tiles ---------- */
 .step .num{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,40px);color:var(--graphite);line-height:1;transition:color .4s}
 .step:hover .num{color:var(--green)}
-.step h3{font-family:var(--serif);font-weight:500;font-size:clamp(19px,2vw,24px);margin-top:14px}
+.step h3{font-family:var(--sans);font-weight:600;font-size:clamp(15px,1.5vw,16.5px);letter-spacing:.01em;margin-top:16px}
 .step p{color:var(--muted);font-size:14px;margin-top:8px}
-.step .tag{position:absolute;top:clamp(22px,2.6vw,36px);right:clamp(22px,2.6vw,36px);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.step .tag{position:absolute;top:clamp(24px,3vw,44px);right:clamp(24px,3vw,44px);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 12px}
 .step.wide{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);align-items:center}
 .step.wide h3{margin-top:0}
 .step.wide .body{padding-right:120px}
@@ -171,27 +171,27 @@ section.tight{padding-top:0}
 /* ---------- quotes ---------- */
 .quote{display:flex;flex-direction:column;gap:18px}
 .quote .mark{font-family:var(--serif);font-size:56px;line-height:.5;color:var(--green);height:22px}
-.quote blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.4vw,18.5px);line-height:1.5}
+.quote blockquote{font-family:var(--sans);font-style:normal;font-size:clamp(14px,1.2vw,15.5px);line-height:1.75;color:var(--muted-2)}
 .quote .who{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:auto}
 
 /* ---------- partners / videos / tour / values ---------- */
 .partner .role{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}
-.partner .nm{font-family:var(--serif);font-size:clamp(22px,2.3vw,28px);font-weight:600;margin-top:8px}
+.partner .nm{font-family:var(--sans);font-size:clamp(17px,1.8vw,20px);font-weight:600;letter-spacing:.02em;margin-top:8px}
 .partner p{color:var(--muted);font-size:13.5px;line-height:1.6;margin-top:10px}
 .bignote .big{font-family:var(--serif);font-size:clamp(24px,3vw,40px);font-weight:600;line-height:1.12}
-.bignote .big em{font-style:italic;color:var(--green)}
+.bignote .big em{font-style:normal;color:var(--green)}
 .bignote p+p{color:var(--muted-2);margin-top:14px;max-width:64ch}
 .bignote{border-left:3px solid var(--green)}
 .vid .ph{aspect-ratio:16/9;min-height:0}
 .vid .who{padding:16px 20px 18px;font-size:12.5px;color:var(--muted)}
-.vid .who b{display:block;font-family:var(--serif);font-size:16px;color:var(--warm);font-weight:500;margin-bottom:3px}
+.vid .who b{display:block;font-family:var(--sans);font-size:13.5px;color:var(--warm);font-weight:600;margin-bottom:3px}
 .vid{cursor:pointer}
 .vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;border:1px solid rgba(245,245,240,.5);background:rgba(15,15,14,.45);display:grid;place-items:center;z-index:3;transition:.35s var(--ease)}
 .vid:hover .play{background:var(--green);border-color:var(--green)}
 .vid .play svg{width:19px;height:19px;margin-left:3px;color:var(--warm)}
 .vid:hover .play svg{color:#0f0f0e}
 .vid .ph{position:relative}
-.tval .tn{font-family:var(--serif);font-size:clamp(18px,1.9vw,21px);font-weight:500;display:flex;gap:10px;align-items:center}
+.tval .tn{font-family:var(--sans);font-size:clamp(14.5px,1.5vw,16px);font-weight:600;letter-spacing:.01em;display:flex;gap:10px;align-items:center}
 .tval .tn::before{content:"";width:18px;height:3px;border-radius:3px;background:var(--green);flex:0 0 auto}
 .tval p{color:var(--muted);font-size:13.5px;line-height:1.6;margin-top:10px}
 
@@ -218,7 +218,7 @@ section.tight{padding-top:0}
 
 /* ---------- FAQ ---------- */
 .faq-item{margin-bottom:var(--gap)}
-.faq-q{width:100%;text-align:left;background:none;border:0;font-family:var(--serif);font-weight:500;font-size:clamp(17px,1.9vw,21px);color:var(--warm);cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;transition:color .3s}
+.faq-q{width:100%;text-align:left;background:none;border:0;font-family:var(--sans);font-weight:600;font-size:clamp(14.5px,1.5vw,16.5px);letter-spacing:.01em;color:var(--warm);cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;transition:color .3s}
 .faq-q:hover{color:#fff}
 .faq-q .pm{position:relative;width:16px;height:16px;flex:0 0 auto}
 .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--green);transition:transform .3s var(--ease);border-radius:2px}
@@ -267,7 +267,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 .field input:focus,.field select:focus{outline:none;border-color:var(--green)}
 .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238E8E86' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .chips-row{display:flex;flex-wrap:wrap;gap:8px}
-.chips-row .opt{font-size:13px;border:1px solid var(--line);padding:9px 15px;border-radius:999px;cursor:pointer;color:var(--muted-2);transition:.25s}
+.chips-row .opt{font-size:13px;border:1px solid var(--line);padding:9px 15px;border-radius:10px;cursor:pointer;color:var(--muted-2);transition:.25s}
 .chips-row .opt.sel{background:var(--green-soft);border-color:var(--green);color:var(--warm)}
 .modal-card .submit{width:100%;justify-content:center;margin-top:8px}
 .reassure{font-size:11.5px;color:var(--muted);margin-top:16px;line-height:1.6;display:flex;gap:8px}
@@ -278,7 +278,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 .modal-done .check{width:54px;height:54px;border-radius:50%;border:1px solid var(--green);display:grid;place-items:center;margin:0 auto 18px;color:var(--green)}
 
 /* ---------- project ---------- */
-.back{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.05em;color:var(--muted-2);background:none;border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;margin-bottom:30px;transition:.3s}
+.back{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.05em;color:var(--muted-2);background:none;border:1px solid var(--line);border-radius:10px;padding:9px 16px;cursor:pointer;margin-bottom:30px;transition:.3s}
 .back:hover{color:var(--green);border-color:var(--green)}
 .back svg{width:15px;height:15px}
 .proj-k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
@@ -286,7 +286,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 .proj-loc{color:var(--muted)}
 .meta-tile .k{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .meta-tile .v{font-size:15px}
-.body-tile h3{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:12px}
+.body-tile h3{font-family:var(--sans);font-weight:600;font-size:16.5px;margin-bottom:12px}
 .body-tile h3 .lab{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
 .body-tile p{color:var(--muted-2);line-height:1.75;font-size:14.5px}
 .matrow{display:flex;flex-wrap:wrap;gap:24px 48px}
@@ -320,7 +320,7 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
   .nav-pill .btn-primary{display:none}
   .nav-mobile{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:var(--pad);transform:translateY(-100%);transition:transform .5s var(--ease);opacity:0}
   body.menu-open .nav-mobile{transform:none;opacity:1}
-  .nav-mobile a{font-family:var(--serif);font-size:28px;color:var(--warm);padding:12px 4px;border-bottom:1px solid var(--line)}
+  .nav-mobile a{font-family:var(--sans);font-weight:500;font-size:21px;color:var(--warm);padding:12px 4px;border-bottom:1px solid var(--line)}
   .nav-mobile .btn-fill{margin-top:22px;align-self:flex-start;font-size:15px}
   .c4,.c6,.c5,.c7,.c8{grid-column:span 12}
   .c3{grid-column:span 6}
@@ -339,6 +339,35 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
   [data-reveal]{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+
+/* cum lucram — mixed framed/frameless */
+.body-sec{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(24px,4.5vw,80px);align-items:start}
+.qlist{list-style:none;margin:18px 0;display:grid;gap:10px}
+.qlist li{position:relative;padding-left:24px;color:var(--muted-2)}
+.qlist li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.hl{border-left:3px solid var(--green);padding-left:18px;color:var(--muted-2);max-width:62ch}
+.intro-p{color:var(--muted-2);max-width:62ch}
+.intro-p+.hl,.intro-p+.intro-p{margin-top:16px}
+.step .note{font-size:12.5px;color:var(--muted);margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.6}
+.diff{border-top:2px solid var(--green);padding-top:18px}
+.diff h3{font-family:var(--sans);font-weight:600;font-size:clamp(15px,1.5vw,16.5px);line-height:1.4;letter-spacing:.01em}
+.diff p{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.65}
+.quote-big{font-family:var(--serif);font-style:normal;font-size:clamp(19px,2.4vw,28px);line-height:1.45;max-width:34ch}
+.mile .lab{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.mile .pct{font-family:var(--serif);font-weight:600;font-size:clamp(26px,2.6vw,36px);color:var(--green);line-height:1;margin-top:8px}
+.mile h3{font-family:var(--sans);font-weight:600;font-size:14px;margin-top:10px;line-height:1.4}
+.mile p{color:var(--muted);font-size:12.5px;margin-top:8px;line-height:1.6}
+.anchor-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.reassure-line{font-size:12.5px;color:var(--muted);margin-top:18px}
+@media(max-width:1024px){.body-sec{grid-template-columns:1fr;gap:24px}}
+
+/* portfolio archive directory */
+.cat{display:flex;flex-direction:column;gap:12px;justify-content:space-between;min-height:148px;color:inherit}
+.cat .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.cat .cn{font-family:var(--sans);font-weight:600;font-size:clamp(15.5px,1.6vw,18px);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cat .cn svg{width:16px;height:16px;color:var(--muted);transition:.3s var(--ease);flex:0 0 auto}
+.cat:hover .cn svg{color:var(--green);transform:translateX(3px)}
+.cat p{color:var(--muted);font-size:13px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -499,22 +528,34 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 <div class="route" id="route-portofoliu">
   <section class="page-hero"><div class="shell" data-reveal>
     <span class="chiplet">Portofoliu</span>
-    <h1>Proiecte, nu produse.</h1>
-    <p class="sub">Fiecare lucrare a pornit de la o problemă reală de spațiu. Filtrează după tipul de proiect și deschide oricare pentru povestea completă.</p>
+    <h1>Proiecte alese, povestite ca atare.</h1>
+    <p class="sub">Aici găsești o selecție de lucrări, fiecare cu povestea ei — provocare, soluție, materiale. Arhiva completă, cu sute de proiecte organizate pe camere, te așteaptă mai jos.</p>
   </div></section>
+
   <section class="tight"><div class="shell">
-    <div class="filters" id="filters" data-reveal>
-      <button class="chip active" data-filter="toate">Toate</button>
-      <button class="chip" data-filter="bucatarii">Bucătării</button>
-      <button class="chip" data-filter="dressinguri">Dressinguri</button>
-      <button class="chip" data-filter="living">Living</button>
-      <button class="chip" data-filter="dormitoare">Dormitoare</button>
-      <button class="chip" data-filter="apartament">Apartament complet</button>
-      <button class="chip" data-filter="regim">Regim hotelier</button>
-    </div>
     <div class="bento" id="workGridFull"></div>
   </div></section>
-  <section><div class="shell bento">
+
+  <section class="tight" id="arhiva"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">Arhiva completă</span>
+      <h2 class="sec-title">Sute de proiecte, pe camere.</h2>
+      <p class="sec-sub">Galeriile complete sunt organizate pe tipul de încăpere — alege camera și răsfoiește toate lucrările.</p>
+    </div></div>
+    <div class="bento">
+      <a class="tile cat lift c4" data-reveal href="https://yuka.ro/mobila-bucatarii-la-comanda/"><span class="k">Arhivă</span><span class="cn">Bucătării <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Inima casei — proiectele noastre cele mai complexe.</p></a>
+      <a class="tile cat lift c4 d1" data-reveal href="https://yuka.ro/mobila-living-la-comanda/"><span class="k">Arhivă</span><span class="cn">Living <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Biblioteci, comode TV, pereți întregi gândiți unitar.</p></a>
+      <a class="tile cat lift c4 d2" data-reveal href="https://yuka.ro/dormitoare-la-comanda/"><span class="k">Arhivă</span><span class="cn">Dormitoare <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Dulapuri, paturi tapițate, depozitare ascunsă.</p></a>
+      <a class="tile cat lift c4" data-reveal href="https://yuka.ro/dressing-la-comanda/"><span class="k">Arhivă</span><span class="cn">Dressing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Walk-in și dressinguri compacte, la milimetru.</p></a>
+      <a class="tile cat lift c4 d1" data-reveal href="https://yuka.ro/camere-copii-si-tineret-la-comanda/"><span class="k">Arhivă</span><span class="cn">Camere copii &amp; tineret <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Mobilier care crește odată cu ei.</p></a>
+      <a class="tile cat lift c4 d2" data-reveal href="https://yuka.ro/mobila-hol-la-comanda/"><span class="k">Arhivă</span><span class="cn">Hol <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Primul spațiu pe care îl vezi — ordonat și primitor.</p></a>
+      <a class="tile cat lift c4" data-reveal href="https://yuka.ro/mobilier-baie-la-comanda/"><span class="k">Arhivă</span><span class="cn">Baie <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Mobilier rezistent la umiditate, croit pe spațiu.</p></a>
+      <a class="tile cat lift c4 d1" data-reveal href="https://yuka.ro/locatii-proiecte/-office-pentru-business"><span class="k">Arhivă</span><span class="cn">Office &amp; business <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Birouri, recepții, HoReCa și regim hotelier.</p></a>
+      <a class="tile cat lift c4 d2" data-reveal href="https://yuka.ro/mobilier-divers-la-comanda/"><span class="k">Arhivă</span><span class="cn">Mobilier divers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span><p>Piese unicat și soluții speciale.</p></a>
+    </div>
+  </div></section>
+
+  <section class="tight" style="padding-bottom:0"><div class="shell bento">
     <div class="tile lg deep c12 final-tile" data-reveal>
       <h2>Îți place o direcție?</h2>
       <p>Programează o vizită și pornim de la un proiect care ți-a plăcut.</p>
@@ -525,38 +566,131 @@ footer{padding-block:clamp(20px,3vw,36px) 28px}
 
 <!-- ============ CUM LUCRĂM ============ -->
 <div class="route" id="route-cum-lucram">
-  <section class="page-hero"><div class="shell" data-reveal>
-    <span class="chiplet">Cum lucrăm</span>
-    <h1>Metoda YUKA, în șapte pași.</h1>
-    <p class="sub">Un singur manager de proiect te însoțește de la prima discuție până după montaj. Știi mereu ce urmează, cine răspunde și când.</p>
-  </div></section>
-  <section class="tight"><div class="shell"><div class="bento" id="stepsFull"></div></div></section>
 
-  <section class="tight"><div class="shell bento">
-    <div class="tile lg deep c12" data-reveal>
-      <div class="pos-grid">
-        <div><span class="chiplet">Înainte de prima vizită</span>
-          <p class="big" style="margin-top:20px">Ce să pregătești</p></div>
-        <div class="facts" style="margin:0">
-          <div class="fact"><div class="k">Spațiul</div><div class="v">Măsurători aproximative sau planul locuinței</div></div>
-          <div class="fact"><div class="k">Inspirație</div><div class="v">Poze cu ce îți place (și ce nu)</div></div>
-          <div class="fact"><div class="k">Funcțional</div><div class="v">Cum folosești spațiul: gătit, depozitare, obiceiuri</div></div>
-          <div class="fact"><div class="k">Buget</div><div class="v">Un interval orientativ, pentru soluții realiste</div></div>
-        </div>
+  <!-- HERO -->
+  <section class="page-hero"><div class="shell" data-reveal>
+    <span class="chiplet">Cum lucrăm · Constanța · din 2000</span>
+    <h1>Un proiect gândit în jurul tău, nu al unui catalog.</h1>
+    <p class="sub">Un singur om de la prima discuție până la montaj. Spațiul tău, scanat la milimetru. Și termene cu plăți clare la fiecare pas — ca să știi mereu unde ești.</p>
+    <div class="anchor-row">
+      <button class="chip" onclick="scrollSec('cl-inainte')">Înainte de desen</button>
+      <button class="chip" onclick="scrollSec('cl-pasi')">Cei 7 pași</button>
+      <button class="chip" onclick="scrollSec('cl-diferente')">De ce YUKA</button>
+      <button class="chip" onclick="scrollSec('cl-plati')">Termene &amp; plăți</button>
+      <button class="chip" onclick="scrollSec('cl-intrebari')">Întrebări</button>
+    </div>
+  </div></section>
+
+  <!-- ÎNAINTE DE ORICE DESEN — frameless -->
+  <section class="tight" id="cl-inainte"><div class="shell body-sec">
+    <div data-reveal>
+      <span class="chiplet">Înainte de orice desen</span>
+      <h2 class="sec-title" style="font-size:clamp(26px,3.4vw,44px)">Nu începem cu materiale. Începem cu felul în care trăiești.</h2>
+    </div>
+    <div class="d1" data-reveal>
+      <p class="intro-p">La prima discuție nu îți vom vorbi despre plăci și sisteme. Te vom întreba lucruri aparent mărunte — pentru că exact ele decid cum trebuie gândit mobilierul:</p>
+      <ul class="qlist">
+        <li>Unde îți ții cerealele?</li>
+        <li>Unde ajunge aspiratorul după curățenie?</li>
+        <li>Ai o oală mare care nu încape nicăieri?</li>
+        <li>Gătești des — sau ai nevoie mai mult de depozitare?</li>
+        <li>Ce te enervează la mobilierul de acum?</li>
+      </ul>
+      <p class="intro-p">Apoi ne uităm la încăpere: grinzi, stâlpi, ferestre, calorifere, centrală, aer condiționat. Un proiect bine gândit le maschează și le integrează pe toate — nu se preface că nu există.</p>
+    </div>
+  </div></section>
+
+  <!-- CEI 7 PAȘI -->
+  <section id="cl-pasi"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">Metoda YUKA</span>
+      <h2 class="sec-title">Șapte pași. Un singur om care răspunde de toți.</h2>
+      <p class="intro-p" style="margin-top:16px">Scopul nostru nu e doar mobilier care funcționează fără probleme 10–20 de ani. E și timpul tău — cel mai valoros și cel mai scump lucru de azi.</p>
+      <p class="hl" style="margin-top:16px">De când ai intrat în contact cu YUKA și până la livrare, ai managerul tău de proiect. Discuți cu un singur om de la început până la capăt — fără informație dublată, fără „vorbiți cu colegul meu”.</p>
+    </div></div>
+    <div class="bento">
+      <div class="tile step lift c4" data-reveal><span class="tag">Gratuit</span><div class="num">01</div><h3>Consultanță</h3><p>Discutăm în showroom sau online, pe bază de programare. Ne ajută planul locuinței, măsurători de mână sau proiectul de la designer — și, dacă vrei, bugetul tău, ca să configurăm oferta corect de la început.</p><p class="note">Oferta estimativă poate varia cu ±10% până la măsurarea exactă. Fără surprize ascunse la final.</p></div>
+      <div class="tile step lift c4 d1" data-reveal><span class="tag">1–2 zile de la avans</span><div class="num">02</div><h3>Scanare laser a încăperii</h3><p>Scanăm încăperea 360° cu echipament Leica — o radiografie completă a spațiului, la milimetru. În 25 de ani am văzut prea multe încăperi care „din construcție” vin cu surprize. Scanarea le prinde pe toate.</p><p class="note">Ce câștigi: dimensiuni reale, zero erori de proiectare. Proiectarea poate începe chiar înainte ca locuința să fie complet finisată.</p></div>
+      <div class="tile step lift c4 d2" data-reveal><span class="tag">Studio YUKA</span><div class="num">03</div><h3>Proiectare 3D, în spațiul tău real</h3><p>Întâi reconstruim încăperea ta în 3D, din scanare — proiectăm în spațiul real, nu pe o foaie goală. Abia apoi designerul-proiectant transformă discuția într-un proiect tehnic detaliat. Fiecare corp e desenat pentru spațiul tău.</p><p class="note">Durata depinde de complexitatea lucrării — îți spunem termenul exact la avans.</p></div>
+      <div class="tile step lift c4" data-reveal><span class="tag">Showroom sau online</span><div class="num">04</div><h3>Prezentare + tur virtual 3D</h3><p>Nu doar randări frumoase: te plimbi prin spațiul tău în tur virtual, deschizi uși și sertare, vezi exact cum va arăta în casa ta, la scară reală.</p><p class="note">Vezi ceva de modificat? Pui un punct direct pe imagine și se deschide o conversație cu proiectantul, fix pe locul respectiv — prin MarGo, asistenta ta digitală.</p></div>
+      <div class="tile step lift c4 d1" data-reveal><span class="tag">21 zile lucrătoare</span><div class="num">05</div><h3>Producție în fabrica proprie</h3><p>Lucrarea intră în producție în fabrica noastră din Constanța — aceeași incintă cu showroom-ul. Poți veni oricând să vezi live ce se întâmplă cu lucrarea ta: debitare, frezare, cantuire, premontaj.</p><p class="note">Înainte de livrare, mobilierul este asamblat de probă și verificat în fabrică — și îl poți viziona chiar tu.</p></div>
+      <div class="tile step lift c4 d2" data-reveal><span class="tag">La tine</span><div class="num">06</div><h3>Livrare &amp; montaj</h3><p>Stabilim împreună data și ora. Echipa de montatori e deja familiarizată cu proiectul tău — lucrează rapid, curat și cu minim de disconfort. La final, tot ce mai e de făcut e să te bucuri de mobilier.</p></div>
+      <div class="tile step wide lift c12" data-reveal><div class="num">07</div><div class="body"><h3>Garanție &amp; relație de lungă durată</h3><p>Garanție 2 ani, cu revizii în această perioadă și intervenții rapide la cerere, oricând ai nevoie. Garanția poate fi extinsă contra cost, pe câți ani dorești. Mobilierul YUKA e gândit să funcționeze zeci de ani — iar noi rămânem lângă el.</p></div><span class="tag">2 ani + extensie</span></div>
+    </div>
+  </div></section>
+
+  <!-- DE CE YUKA — frameless diffs + anecdote tile -->
+  <section class="tight" id="cl-diferente"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">De ce YUKA costă mai mult</span>
+      <h2 class="sec-title">Diferențele nu se văd în randare. Se văd în anul 5, 10, 20.</h2>
+      <p class="intro-p" style="margin-top:16px">Mobilier premium nu înseamnă doar materiale premium. Înseamnă ce e în interiorul corpului, cum e lipit cantul și ce se întâmplă acolo unde nu te uiți. Asta plătești, de fapt:</p>
+    </div></div>
+    <div class="bento">
+      <div class="diff c6" data-reveal><h3>Cantuire perimetrală cu adeziv PU</h3><p>Cantuim pe tot perimetrul, cu adeziv poliuretanic. Șansele ca plăcile să absoarbă umiditate și să se umfle în timp scad drastic — chiar și la nivel micronic. În plus, mirosul de formaldehidă, specific mobilierului nou, rămâne încapsulat la interior.</p></div>
+      <div class="diff c6 d1" data-reveal><h3>Spate din MDF de 4 mm, frezat în canal</h3><p>Nu folosim PFL subțire prins în capse, cum face majoritatea. Spatele e frezat și introdus în canal — corpul devine rigid, iar între mobilier și perete rămâne un spațiu care permite ventilația naturală a aerului.</p></div>
+      <div class="diff c6" data-reveal><h3>Feronerie Blum, testată la 250.000 de cicluri</h3><p>Balamale Blum CLIP top BLUMOTION, sertare cu deschidere totală și portanță reală, conectică cu dibluri invizibile. Detaliile pe care le atingi de 50 de ori pe zi sunt cele care nu au voie să cedeze.</p></div>
+      <div class="diff c6 d1" data-reveal><h3>Precizie de fabrică, nu de șantier</h3><p>CNC în 5 axe care decupează și găurește simultan, mașină de cantuit perimetral, depozit de materie primă acționat robotizat. Plus asamblarea de probă în fabrică, înainte de livrare — verificăm noi, ca să nu descoperi tu.</p></div>
+      <div class="tile lg deep c12" data-reveal style="margin-top:6px">
+        <p class="quote-big">„Avem clienți care revin după 20 de ani — nu pentru o problemă tehnică, ci doar ca să schimbe culoarea fronturilor. S-au plictisit de culoare. Atât.”</p>
       </div>
     </div>
   </div></section>
 
-  <section class="tight"><div class="shell">
-    <div class="sec-head"><div class="lead" data-reveal><span class="chiplet">Întrebări frecvente</span><h2 class="sec-title">Ce întreabă oamenii.</h2></div></div>
+  <!-- TERMENE & PLĂȚI -->
+  <section class="tight" id="cl-plati"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">Termene &amp; plăți</span>
+      <h2 class="sec-title">Drumul de la prima discuție la montaj, cu plățile clare.</h2>
+    </div></div>
+    <div class="bento">
+      <div class="tile mile lift c3" data-reveal><div class="lab">Pasul 1 · La semnare</div><div class="pct">30%</div><h3>Avans la semnare</h3><p>Declanșează tot procesul: în 1–2 zile venim la scanare, apoi pornește proiectarea.</p></div>
+      <div class="tile mile lift c3 d1" data-reveal><div class="lab">Pasul 2 · La aprobare</div><div class="pct">+30%</div><h3>La aprobarea proiectului</h3><p>Discutăm toate detaliile, faci calculul final, aprobi. Plata se completează până la 60% și lucrarea intră în producție.</p></div>
+      <div class="tile mile lift c3 d2" data-reveal><div class="lab">Pasul 3 · Înainte de livrare</div><div class="pct">40%</div><h3>Înainte de livrare &amp; montaj</h3><p>Mobilierul e asamblat de probă și verificat în fabrică. Se achită diferența și programăm montajul.</p></div>
+      <div class="tile mile lift c3 d3" data-reveal><div class="lab">După montaj</div><div class="pct">2 ani</div><h3>Garanție cu revizii incluse</h3><p>Intervenții rapide la cerere. Extensibilă contra cost, pe câți ani dorești.</p></div>
+    </div>
+    <p class="hl" data-reveal style="margin-top:clamp(20px,2.6vw,32px)">Pe scurt: 30% la semnare → încă 30% la aprobarea proiectului → 40% înainte de livrare. Producția durează 21 de zile lucrătoare de la aprobare. Oferta inițială poate varia cu ±10% până la măsurarea exactă — de aceea măsurăm cu laser, nu cu ruleta.</p>
+  </div></section>
+
+  <!-- MARGO -->
+  <section class="tight" id="cl-margo"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal>
+      <span class="chiplet">Inovație digitală · Soft propriu YUKA</span>
+      <h2 class="sec-title">Fă cunoștință cu MarGo, asistenta ta digitală.</h2>
+      <p class="intro-p" style="margin-top:16px">De partea ta sunt doi. Managerul tău de proiect — omul care decide, te consiliază și răspunde de tot. Și MarGo — asistenta digitală dezvoltată de noi, care ține totul în ordine și nu doarme niciodată. Premium nu e doar mobilierul: sunt și instrumentele construite în jurul lui.</p>
+    </div></div>
+    <div class="bento">
+      <div class="tile tval lift c4" data-reveal><div class="tn">Statusul, în orice moment</div><p>Toate etapele, pas cu pas — de la evaluare și elaborare, la producție, livrare și montaj. Intri în contul tău 24/7 și știi exact unde e lucrarea, fără să suni pe nimeni.</p></div>
+      <div class="tile tval lift c4 d1" data-reveal><div class="tn">Toate documentele, la un loc</div><p>Oferte, contracte, facturi, măsurători, schițe tehnice, proiecte 3D și randări — încărcate și accesibile securizat. Nimic rătăcit prin e-mailuri sau mesaje.</p></div>
+      <div class="tile tval lift c4 d2" data-reveal><div class="tn">Organizat pe încăperi</div><p>Bucătăria, dressingul, livingul — fiecare încăpere e un proiect separat, bine structurat. Vezi clar ce s-a decis și ce urmează, pentru fiecare în parte.</p></div>
+      <div class="tile tval lift c4" data-reveal><div class="tn">Pui un punct pe imagine</div><p>Vezi ceva de modificat? Pui un punct fix pe randare și MarGo deschide o conversație cu managerul sau proiectantul, exact pe acel detaliu.</p></div>
+      <div class="tile tval lift c4 d1" data-reveal><div class="tn">Aprobi de acasă</div><p>Prezentarea proiectului, discuțiile pe detalii și aprobarea se pot face integral din cont. Mai puține drumuri la showroom — esențial dacă ești în alt oraș sau în afara țării.</p></div>
+      <div class="tile tval lift c4 d2" data-reveal><div class="tn">Un singur fir de comunicare</div><p>Mesaje directe către managerul tău de proiect, cu toată istoria păstrată în cont, legată de proiect — nu împrăștiată pe trei canale. Omul răspunde, MarGo ține minte.</p></div>
+    </div>
+  </div></section>
+
+  <!-- POVEȘTI -->
+  <section class="tight" id="cl-povesti"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal><span class="chiplet">Povești clienți</span><h2 class="sec-title">Evaluarea cea mai onestă.</h2></div></div>
+    <div class="bento" id="quotesCl"></div>
+  </div></section>
+
+  <!-- FAQ -->
+  <section class="tight" id="cl-intrebari"><div class="shell">
+    <div class="sec-head"><div class="lead" data-reveal><span class="chiplet">Întrebări frecvente</span><h2 class="sec-title">Ce ne întreabă toată lumea.</h2></div></div>
     <div id="faq"></div>
   </div></section>
 
-  <section class="tight" style="padding-bottom:0"><div class="shell bento">
+  <!-- CTA -->
+  <section class="tight" style="padding-bottom:0" id="cl-contact"><div class="shell bento">
     <div class="tile lg deep c12 final-tile" data-reveal>
-      <h2>Începem cu o discuție.</h2>
-      <p>Prima consultație e gratuită, pe bază de programare.</p>
-      <div class="row"><button class="btn btn-fill" onclick="openModal()">Programează o vizită <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <h2>Ai un spațiu în minte? Hai să-l vedem împreună.</h2>
+      <p>Prima consultanță e gratuită și pe bază de programare — în showroom, online sau direct pe WhatsApp, cum ți-e mai simplu.</p>
+      <div class="row">
+        <button class="btn btn-fill" onclick="openModal()">Programează o vizită <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <a class="btn btn-ghost" href="https://wa.me/40790000288" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
+      </div>
+      <p class="reassure-line">Te contactăm în maximum o zi lucrătoare. Răspunde de obicei chiar managerul de proiect, nu un call center.</p>
     </div>
   </div></section>
 </div>
@@ -839,12 +973,13 @@ const values=[
   ['Mentenanță','Revizii gratuite 2 ani și sprijin și după — o relație, nu o vânzare.'],
 ];
 const faqs=[
-  ['Cât costă un proiect la comandă?','Depinde de dimensiuni, materiale și feronerie. La consultație primești o estimare orientativă, iar noi lucrăm pe mai multe niveluri de buget, fără să sacrificăm părțile care contează (feronerie, blaturi).'],
-  ['Cât durează de la măsurători la montaj?','În general 4–8 săptămâni, în funcție de complexitate și de finisajele alese. Primești un termen clar în ofertă și ești ținut la curent prin contul de client.'],
-  ['Pot lucra cu propriul designer sau arhitect?','Da. Colaborăm frecvent cu designerul tău, preluăm proiectul tehnic și ne ocupăm de producție și montaj.'],
-  ['Ce materiale folosiți?','Plăci EGGER, feronerie Blum, Häfele și Hettich, blaturi compacte și soluții pe măsură. Alegem împreună, în showroom, la lumină reală.'],
-  ['Oferiți garanție și mentenanță?','Da — garanție pe lucrare, revizii gratuite în primii 2 ani și intervenții rapide și după.'],
-  ['În ce zonă livrați și montați?','Constanța și împrejurimi în mod curent; pentru proiecte mari, lucrăm și în afara județului.'],
+  ['Cât durează tot procesul, de la avans la montaj?','Măsurarea: 1–2 zile de la avans. Proiectarea: 1–2 săptămâni, în funcție de complexitate și de încărcarea din acel moment. Producția: 21 de zile lucrătoare de la aprobarea proiectului. Montajul se programează imediat după — și merge repede, pentru că asamblăm și verificăm totul în fabrică înainte de livrare.'],
+  ['Consultanța inițială costă ceva?','Nu. Prima consultanță e gratuită, pe bază de programare — în showroom sau online. Ne ajută planul locuinței, măsurători de mână sau proiectul de la designer, dacă există.'],
+  ['Am deja un proiect de la designerul meu de interior. Mai e nevoie de proiectarea voastră?','Da — și e în avantajul tău. Proiectul de design stabilește cum arată; proiectul nostru tehnic stabilește cum se construiește: configurația fiecărui corp, structura de rezistență, accesoriile, detaliile de producție. Respectăm integral viziunea designerului tău și o facem executabilă.'],
+  ['Pot cere modificări după ce văd proiectul propus?','Da, e parte din proces. Pui un punct direct pe randare, în MarGo — asistenta ta digitală — și se deschide o conversație cu proiectantul fix pe acel detaliu. Modificările se discută și se aprobă înainte de calculul final — nimic nu intră în producție fără acordul tău.'],
+  ['Spuneți că oferta poate varia ±10%. De ce?','Pentru că oferta inițială se face pe planuri sau măsurători de mână. După scanarea laser a încăperii, dimensiunile devin exacte la milimetru și prețul devine final. Preferăm să-ți spunem asta de la început decât să descoperi diferențe la sfârșit.'],
+  ['Lucrați și în afara Constanței?','Da — lucrăm în România și în UE. MarGo, asistenta noastră digitală, face colaborarea la distanță simplă: prezentări, aprobare, comentarii pe randări, totul fără drumuri repetate la showroom.'],
+  ['Faceți și mobilier pentru spații comerciale?','Da. Același proces — scanare, proiectare tehnică, producție proprie — se aplică și pentru birouri, recepții, spații HoReCa sau apartamente de închiriat.'],
 ];
 const partners=[
   ['EGGER','Plăci & decoruri','Peste 300 de finisaje și decoruri — baza pentru fronturi și corpuri durabile.'],
@@ -909,9 +1044,9 @@ function fill(el,arr,fn){if(!el)return;arr.forEach((x,i)=>el.appendChild(fn(x,i)
 fill(document.getElementById('workGrid'),projects.slice(0,6),workCard);
 fill(document.getElementById('workGridFull'),projects,workCard);
 fill(document.getElementById('stepsHome'),steps,stepTile);
-fill(document.getElementById('stepsFull'),steps,stepTile);
 fill(document.getElementById('quotesHome'),quotes,quoteCard);
 fill(document.getElementById('quotesDespre'),quotes,quoteCard);
+fill(document.getElementById('quotesCl'),quotes,quoteCard);
 fill(document.getElementById('partnerGrid'),partners,partnerTile);
 fill(document.getElementById('partnerVideos'),partnerVids,videoCard);
 fill(document.getElementById('clientVideos'),clientVids,videoCard);
@@ -945,6 +1080,7 @@ let selected=null;
 function router(){const r=currentRoute();if(r==='proiect'){if(!selected)selected=projects[0];renderProject(selected);}showRoute(r);}
 function navigate(hash){if(location.hash===hash){router();}else location.hash=hash;}
 window.addEventListener('hashchange',router);
+function scrollSec(id){const el=document.getElementById(id);if(!el)return;window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-86,behavior:'smooth'});}
 
 /* ---------- PROJECT ---------- */
 function openProject(id){selected=projects.find(p=>p.id===id)||projects[0];navigate('#/proiect');}
@@ -957,14 +1093,6 @@ function renderProject(p){
   [['pImg0',base+'-1.jpg','ph'],['pImg1',base+'-2.jpg','ph v2'],['pImg2',base+'-3.jpg','ph v3']].forEach(([id,src,cls])=>{const e=document.getElementById(id);if(e){e.className=cls;e.classList.remove('has-img');const im=e.querySelector('img');if(im)im.remove();e.dataset.img=src;e.dataset.imgDone='';}});
   hydrateImages(document.getElementById('route-proiect'));
 }
-
-/* ---------- FILTERS ---------- */
-document.getElementById('filters').addEventListener('click',e=>{
-  const c=e.target.closest('.chip'); if(!c)return;
-  document.querySelector('#filters .chip.active')?.classList.remove('active'); c.classList.add('active');
-  const f=c.dataset.filter;
-  document.querySelectorAll('#workGridFull .work').forEach(w=>{w.classList.toggle('hide',f!=='toate'&&w.dataset.cat!==f);});
-});
 
 /* ---------- NAV / SCROLL ---------- */
 const prog=document.getElementById('progress');

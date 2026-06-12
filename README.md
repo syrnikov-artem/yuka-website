@@ -1,6 +1,11 @@
 # Website YUKA — prototip cu pozele tale
 
-Site-ul YUKA ca prototip funcțional, multi-pagină. Adaugi propriile fotografii (și clipurile video) și vezi exact cum ar arăta site-ul real — fără să atingi codul.
+Site-ul YUKA ca prototip funcțional, multi-pagină — în **două variante de design** care folosesc aceleași poze:
+
+- **`index.html`** — varianta editorială (colțuri drepte, layout tip revistă).
+- **`bento.html`** — varianta rotunjită, bento grid (tile-uri cu colțuri rotunjite, nav tip pastilă).
+
+Ambele au același conținut, aceleași pagini și **aceeași structură de imagini** — pui pozele o singură dată și le vezi în ambele design-uri.
 
 ## Pagini
 Acasă · Portofoliu · Cum lucrăm · **Fabrică & showroom** · **Parteneri** · Despre (25 de ani) · pagina de proiect.
